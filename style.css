@@ -1,0 +1,191 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 18px
+
+### Font
+
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 300, 400, 600 */
+
+:root {
+  --primarySoftBlue: hsl(215, 51%, 70%);
+  --primaryCyna: hsl(178, 100%, 50%);
+
+  --VerydarkbluemainBG: hsl(217, 54%, 11%);
+  --VerydarkbluecardBG: hsl(216, 50%, 16%);
+  --Verydarkblueline: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+
+  --fontSize: 18px;
+  --fontFamily: "Outfit", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--VerydarkbluemainBG);
+  font-family: var(--fontFamily);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  margin: 2rem 1rem;
+  padding: 1.1em;
+  background-color: var(--VerydarkbluecardBG);
+  border-radius: 1rem;
+  
+box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.75);
+}
+
+.img-box {
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-box img {
+  width: 100%;
+  display: block;
+}
+.img-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--primaryCyna);
+  opacity: 0.5;
+  display: none;
+}
+
+.img-box:hover .img-overlay {
+  display: block;
+  cursor: pointer;
+}
+
+.img-overlay img {
+  position: absolute;
+  width: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.detail-box span {
+}
+
+.title {
+  color: var(--white);
+  font-size: 1.3em;
+  font-weight: 600;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: var(--primaryCyna);
+}
+
+.text {
+  color: var(--primarySoftBlue);
+}
+
+.statsFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0;
+}
+.left,
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.left p {
+  color: var(--primaryCyna);
+  font-weight: 600;
+  margin-left: 0.5em;
+}
+
+.right p {
+  color: var(--primarySoftBlue);
+  padding-left: 0.5em;
+}
+
+.acc-footer {
+  border-top: 1px solid var(--primarySoftBlue);
+  display: flex;
+  align-items: center;
+  padding-top: 1em;
+}
+
+.acc-footer img {
+  height: 30px;
+  width: 30px;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+}
+
+.acc-footer p {
+  color: var(--primarySoftBlue);
+  margin-left: 0.5em;
+  font-size: 0.9em;
+  word-spacing: 1;
+}
+
+.acc-footer span {
+  color: var(--white);
+}
+
+.acc-footer span:hover {
+  color: var(--primaryCyna);
+  cursor: pointer;
+}
+
+.attribution {
+    
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
